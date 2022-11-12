@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .button {
+        font-size: 30px;
+        padding: 12pt;
+      }
+
+      .div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+    <title>Trabalhando com Dados</title>
+  </head>
+  <body>
+    <div class="div">
+      <h1>Trabalhando com dados</h1>
+      <button class="button" onclick="nome()">Clique para começar</button>
+      <p id="nome" onclick="nome" style="font-size: 30px">
+        O resultado vai aparecer aqui !
+      </p>
+    </div>
+    <script>
+      function nome() {
+        let nome = prompt("Qual o seu nome ?");
+        document.getElementById(
+          "nome"
+        ).innerHTML = `<p>Olá <strong>${nome} </strong><p>`;
+      }
+    </script>
+  </body>
+</html>

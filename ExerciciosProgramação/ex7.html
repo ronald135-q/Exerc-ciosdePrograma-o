@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .button {
+        padding: 12px;
+        font-size: 30pt;
+      }
+    </style>
+    <title>Média</title>
+  </head>
+  <body>
+    <div class="div">
+      <h1>Média do pai</h1>
+      <button class="button" onclick="media()">Clique aqui</button>
+      <p id="media">O resultado aparecerá aqui</p>
+    </div>
+
+    <script>
+      function media() {
+        let nome = prompt("Qual o seu nome ?");
+        let nota1 = Number(prompt(`Qual sua primeira nota, ${nome} `));
+        let nota2 = Number(prompt(`Qual sua segunda nota, ${nome} `));
+        let nota3 = Number(prompt(`Qual sua terceira nota, ${nome} `));
+        let media = nota1 + nota2 + nota3 / 3;
+        document.getElementById(
+          "media"
+        ).innerHTML = ` <p>A média das notas é ${media} </p>`;
+      }
+    </script>
+  </body>
+</html>

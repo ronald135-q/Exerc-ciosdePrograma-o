@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        margin-top: 0%;
+      }
+
+      .button {
+        padding: 12px;
+        font-size: 30px;
+      }
+
+      .text {
+        font-size: 20px;
+        color: blue;
+      }
+    </style>
+
+    <title>Soma</title>
+  </head>
+  <body>
+    <div class="div">
+      <h1>Soma dos números</h1>
+      <button class="button" id="button" onclick="soma()">Clique aqui</button>
+      <p id="soma" class="text"></p>
+    </div>
+    <script>
+      function soma() {
+        let numero1 = Number(prompt("Digite o primeiro número: "));
+        let numero2 = Number(prompt("Digite o segundo número: "));
+        let soma = numero1 + numero2;
+        document.getElementById(
+          "soma"
+        ).innerHTML = `<p>O resultado da soma de ${numero1} e ${numero2} é ${soma} </p>`;
+      }
+    </script>
+  </body>
+</html>

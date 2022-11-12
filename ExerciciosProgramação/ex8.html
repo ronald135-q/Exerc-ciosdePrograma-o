@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .div {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        background-color: blue;
+      }
+
+      .body {
+        background-color: black;
+      }
+
+      .button {
+        padding: 21px;
+        font-size: 20pt;
+      }
+    </style>
+    <title>Vários cálculos</title>
+  </head>
+  <body>
+    <div class="div">
+      <h1>Vários cálculos</h1>
+      <button class="button" onclick="calculos()">Clique aqui</button>
+      <p id="calculos"></p>
+      <ul id="calculo"></ul>
+    </div>
+    <script>
+      function calculos() {
+        let numero = Number(prompt("Qual o número ?"));
+        let lista = document.getElementById("calculo");
+        let li = document.createElement("li");
+        let li2 = document.createElement("li");
+        li.textContent = `O valor absoluto é ${numero}
+        `;
+        li2.textContent = `A sua parte inteira é ${numero}`;
+        lista.appendChild(li);
+        lista.appendChild(li2);
+      }
+    </script>
+  </body>
+</html>
